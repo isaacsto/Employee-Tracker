@@ -32,7 +32,7 @@ VALUES ("Head Chef", "Back of House"),
        ("Assistant Manager", "Management");
        
 
-INSERT INTO departments ()
+INSERT INTO departments (department_id)
 VALUES ("Back of House"),
        ("Front of House"),
        ("Management");

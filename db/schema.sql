@@ -12,16 +12,12 @@ CREATE TABLE employee_roles (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     role_title VARCHAR(100),
     review TEXT NOT NULL,
-    /* FOREIGN KEY (employee_roles)
-    REFERENCES employee(id) */
-    ON DELETE SET NULL
+    
 );
 
 CREATE TABLE departments (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     departments VARCHAR(100),
-    review TEXT NOT NULL,
-   /*  FOREIGN KEY (employee_role)
-    REFERENCES employee(id) */
-    ON DELETE SET NULL
+    review TEXT NOT NULL,  
+   
 );
