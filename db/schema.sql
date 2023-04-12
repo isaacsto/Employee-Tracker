@@ -17,7 +17,7 @@ CREATE TABLE employee_roles (
     ON DELETE SET NULL
 );
 
-CREATE TABLE department (
+CREATE TABLE departments (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     department VARCHAR(100),
     review TEXT NOT NULL,
