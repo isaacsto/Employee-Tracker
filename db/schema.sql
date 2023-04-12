@@ -10,7 +10,7 @@ CREATE TABLE employees (
 
 CREATE TABLE employee_roles (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    employee_role VARCHAR(100),
+    role_title VARCHAR(100),
     review TEXT NOT NULL,
     /* FOREIGN KEY (employee_roles)
     REFERENCES employee(id) */
@@ -19,7 +19,7 @@ CREATE TABLE employee_roles (
 
 CREATE TABLE departments (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    department VARCHAR(100),
+    departments VARCHAR(100),
     review TEXT NOT NULL,
    /*  FOREIGN KEY (employee_role)
     REFERENCES employee(id) */

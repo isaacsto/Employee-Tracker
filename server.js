@@ -1,11 +1,11 @@
-//requore express
+//require express
 const express = require('express');
 // Import and require mysql2
 const mysql = require('mysql2');
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { createConnection } = require('net');
+
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -24,7 +24,7 @@ const db = mysql.createConnection(
     password: '',
     database: 'employees_db'
   },
-  console.log(`Connected to the movies_db database.`)
+  console.log(`Connected to the employees_db database.`)
 );
 
 //console display
@@ -46,17 +46,19 @@ inquirer
     },
 ])
 
+
 .then(async (answers) => {
     switch(answers.action) {
         case 'View all departments':
-            const [departments] = await connection.execute('SELECT * FROM departments')
+            const [departments] = await db.execute('SELECT * FROM departments')
+            console.table(departments);
             break;
         case 'View all roles':
-            const [roles] = await connection.execute('SELECT * FROM roles');
+            const [roles] = await db.execute('SELECT * FROM roles');
             console.table(roles);
             break;
         case 'View all employees':
-            const [employees] = await connection.execute('SELECT * FROM employees');
+            const [employees] = await database.execute('SELECT * FROM employees');
             console.table(employees);
             break;
         case 'Add a department':
@@ -68,4 +70,4 @@ inquirer
         case 'Update an employee role':
             break;
     }
-})
+});
