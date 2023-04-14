@@ -1,7 +1,7 @@
 INSERT INTO employees (employee_name)
 VALUES ("Bob Ross"),
        ("Linda Evangelista"),
-       ("Raf Fienz"),
+       ("Ralph Fienz"),
        ("Karen Pence"),
        ("Anthony Bourdain"),
        ("Samuel L. Jackson"),

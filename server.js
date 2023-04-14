@@ -31,7 +31,9 @@ async function main() {
 
   switch (answers.action) {
     case 'View all departments':
-      const [departments] = await db.execute('SELECT * FROM departments');
+      const [departments] = db.query('SELECT * FROM departments', function(err, results){
+        console.log(results)
+      });
       console.table(departments);
       break;
     case 'View all roles':
