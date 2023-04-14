@@ -23,7 +23,7 @@ async function main() {
         'View all employees',
         'Add a department',
         'Add a role',
-        'Add an employee',
+        'Add employee',
         'Update an employee role'
       ]
     },
