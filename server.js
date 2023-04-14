@@ -32,7 +32,11 @@ async function main() {
   switch (answers.action) {
     case 'View all departments':
       const [departments] = db.query('SELECT * FROM departments', function(err, results){
-        console.log(results)
+          if (err) {
+            reject(err);
+        } else {
+          resolve(results);
+        }
       });
       console.table(departments);
       break;
