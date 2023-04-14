@@ -19,20 +19,20 @@ VALUES ("Bob Ross"),
        ("Florence Pugh");
 
 INSERT INTO employee_roles (role_title, department_id)
-VALUES ("Head Chef", "Back of House"),
-       ("Sous chef", "Back of House"),
-       ("Linecook", "Back of House"),
-       ("Dishwasher", "Back of House"),
-       ("Maitre d", "Front of House"),
-       ("Host", "Front of House"),
-       ("Bartender", "Front of House"),
-       ("Waiter", "Front of House"),
-       ("Busser", "Front of House"),
-       ("Manager", "Management"),
-       ("Assistant Manager", "Management");
+VALUES ("Head Chef", 1),
+       ("Sous chef", 1),
+       ("Linecook", 1),
+       ("Dishwasher", 1),
+       ("Maitre d", 2),
+       ("Host", 2),
+       ("Bartender", 2),
+       ("Waiter", 2),
+       ("Busser", 2),
+       ("Manager", 3),
+       ("Assistant Manager", 3);
        
 
-INSERT INTO departments (department_id)
+INSERT INTO departments (department)
 VALUES ("Back of House"),
        ("Front of House"),
        ("Management");
