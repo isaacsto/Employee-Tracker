@@ -11,10 +11,10 @@ VALUES ("Bob Ross", 1, 1 "Head Chef", 100000.00),
        ("Tasya Van Ree", 10, 2 "Host", 30000.00),
        ("Millie Bobby Brown", "Host", 30000.00),
        ("Peter Kropotkin", 11, 2, "Bartender", 90000.00),
-       ("Elon Musk", 12, 2, "Waiter" 40000.00),
+       ("RuPaul", 12, 2, "Waiter", 40000.00),
        ("Bindi Irwin", 13, 2, "Waiter", 40000.00),
        ("Jack Skellington", 14, 2, "Waiter", 40000.00),
-       ("RuPaul", 15, 2, "Busser", 25000.00),
+       ("Elon Musk", 15, 2, "Busser" 25000.00),
        ("Kanye West", 16, 2, "Busser", 25000.00),
        ("Florence Pugh", 17, 3, "Manager", 70000.00 )
        ("Fyodor Dosotoevsky", 18, 3, "Assistant Manager", 60000.00);
