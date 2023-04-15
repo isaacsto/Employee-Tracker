@@ -24,6 +24,6 @@ CREATE TABLE employee_roles (
 
 CREATE TABLE departments (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    VARCHAR(30) NOT NULL
+    department_name VARCHAR(30) NOT NULL
    
 );

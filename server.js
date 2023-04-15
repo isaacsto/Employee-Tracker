@@ -30,34 +30,28 @@ async function main() {
   ]);
 
   switch (answers.action) {
+
     case 'View all departments':
-      const [departments] = db.query('SELECT * FROM departments', function(err, results){
-          if (err) {
-            reject(err);
-        } else {
-          resolve(results);
-        }
-      });
+      const departments = await db.promise().query('SELECT * FROM departments')
       console.table(departments);
       break;
+
     case 'View all roles':
-      const [roles] = db.query('SELECT * FROM roles', function(err, results){
-        console.log(results)
-      });
-      console.table(roles);
+      const roles = await db.promise().query('SELECT * FROM employee_roles')
+      console.log(results)
       break;
+
     case 'View all employees':
-      const [employees] = db.query('SELECT * FROM employees', function(err, results){
-        console.log(results);
-      })
-      console.table(employees);
+      const employees = await db.promise().query('SELECT * FROM employees')
+      console.log(results);
       break;
+
     case 'Add a department':
       break;
     case 'Add a role':
       break;
     case 'Add an employee':
-      break;
+      break;  
     case 'Update an employee role':
       break;
   }
