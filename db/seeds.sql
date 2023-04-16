@@ -17,7 +17,7 @@ VALUES ("Head Chef", 100000.00, 1),
        ("Manager", 70000.00, 3),
        ("Assistant Manager", 60000.00, 3);
        
-       
+
 INSERT INTO employees (employee_name, department_id, title)
 VALUES ("Bob Ross", 1, "Head Chef"),
        ("Linda Evangelista", 1, "Sous Chef"),
@@ -37,5 +37,5 @@ VALUES ("Bob Ross", 1, "Head Chef"),
        ("Elon Musk", 2, "Busser"),
        ("Kanye West", 2, "Busser"),
        ("Florence Pugh", 3, "Manager"),
-       ("Fyodor Dosotoevsky", 3, "Assistant Manager"); */
+       ("Fyodor Dosotoevsky", 3, "Assistant Manager"); 
 
