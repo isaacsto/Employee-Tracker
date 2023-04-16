@@ -1,41 +1,41 @@
-INSERT INTO employees (employee_name, role_id, dapartment_id, title, salary)
-VALUES ("Bob Ross", 1, 1 "Head Chef", 100000.00),
-       ("Linda Evangelista", 2, 2, "Sous Chef", 70000.00),
-       ("Ralph Fienz", 3, 2, "Sous Chef", 700000.00),
-       ("Karen Pence", 4, 1, "Linecook", 45000.00),
-       ("Anthony Bourdain", 5, 1, "Linecook", 45000.00),
-       ("Samuel L. Jackson", 6, 1, "Linecook", 45000.00),
-       ("Ted Bundy", 7, 1, "Dishwasher", 25000.00),
-       ("John F Kennedy Jr.", 8, 2, "Maitre d", 55000.00),
-       ("Natalie Wynn", 9, 2, "Host", 30000.00),
-       ("Tasya Van Ree", 10, 2 "Host", 30000.00),
-       ("Millie Bobby Brown", "Host", 30000.00),
-       ("Peter Kropotkin", 11, 2, "Bartender", 90000.00),
-       ("RuPaul", 12, 2, "Waiter", 40000.00),
-       ("Bindi Irwin", 13, 2, "Waiter", 40000.00),
-       ("Jack Skellington", 14, 2, "Waiter", 40000.00),
-       ("Elon Musk", 15, 2, "Busser" 25000.00),
-       ("Kanye West", 16, 2, "Busser", 25000.00),
-       ("Florence Pugh", 17, 3, "Manager", 70000.00 )
-       ("Fyodor Dosotoevsky", 18, 3, "Assistant Manager", 60000.00);
-
-INSERT INTO employee_roles (role_title, department_id)
-VALUES ("Head Chef", 1),
-       ("Sous chef", 1),
-       ("Linecook", 1),
-       ("Dishwasher", 1),
-       ("Maitre d", 2),
-       ("Host", 2),
-       ("Bartender", 2),
-       ("Waiter", 2),
-       ("Busser", 2),
-       ("Manager", 3),
-       ("Assistant Manager", 3);
-       
-
-INSERT INTO department (department_name)
+/* 
+INSERT INTO departments (department_name)
 VALUES ("Back of House"),
        ("Front of House"),
-       ("Management");
+       ("Management"); */
       
+/* INSERT INTO employee_roles (title, salary, department_id)
+VALUES ("Head Chef", 100000.00, 1),
+       ("Sous chef", 70000.00, 1),
+       ("Linecook", 40000.00, 1),
+       ("Dishwasher", 25000.00, 1),
+       ("Maitre d", 45000.00, 2),
+       ("Host", 35000.00, 2),
+       ("Bartender", 90000.00, 2),
+       ("Waiter", 40000.00, 2),
+       ("Busser", 25000.00, 2),
+       ("Manager", 70000.00, 3),
+       ("Assistant Manager", 60000.00, 3); */
        
+
+INSERT INTO employees (employee_name, department_id, title)
+VALUES ("Bob Ross", 1, "Head Chef"),
+       ("Linda Evangelista", 1, "Sous Chef"),
+       ("Ralph Fienz", 1, "Sous Chef"),
+       ("Karen Pence", 1, "Linecook"),
+       ("Anthony Bourdain", 1, "Linecook"),
+       ("Samuel L. Jackson", 1, "Linecook"),
+       ("Ted Bundy", 1, "Dishwasher"),
+       ("John F Kennedy Jr.", 2, "Maitre d"),
+       ("Natalie Wynn", 2, "Host"),
+       ("Tasya Van Ree", 2, "Host"),
+       ("Millie Bobby Brown", 2, "Host"),
+       ("Peter Kropotkin", 2, "Bartender"),
+       ("RuPaul", 2, "Waiter"),
+       ("Bindi Irwin", 2, "Waiter"),
+       ("Jack Skellington", 2, "Waiter"),
+       ("Elon Musk", 2, "Busser"),
+       ("Kanye West", 2, "Busser"),
+       ("Florence Pugh", 3, "Manager"),
+       ("Fyodor Dosotoevsky", 3, "Assistant Manager");
+
