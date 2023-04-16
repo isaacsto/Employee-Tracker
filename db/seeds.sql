@@ -2,7 +2,7 @@
 INSERT INTO departments (department_name)
 VALUES ("Back of House"),
        ("Front of House"),
-       ("Management"); */
+       ("Management"); 
       
 INSERT INTO employee_roles (title, salary, department_id)
 VALUES ("Head Chef", 100000.00, 1),
