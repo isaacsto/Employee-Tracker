@@ -1,10 +1,10 @@
-/* 
+
 INSERT INTO departments (department_name)
 VALUES ("Back of House"),
        ("Front of House"),
        ("Management"); */
       
-/* INSERT INTO employee_roles (title, salary, department_id)
+INSERT INTO employee_roles (title, salary, department_id)
 VALUES ("Head Chef", 100000.00, 1),
        ("Sous chef", 70000.00, 1),
        ("Linecook", 40000.00, 1),
@@ -15,9 +15,9 @@ VALUES ("Head Chef", 100000.00, 1),
        ("Waiter", 40000.00, 2),
        ("Busser", 25000.00, 2),
        ("Manager", 70000.00, 3),
-       ("Assistant Manager", 60000.00, 3); */
+       ("Assistant Manager", 60000.00, 3);
        
-
+       
 INSERT INTO employees (employee_name, department_id, title)
 VALUES ("Bob Ross", 1, "Head Chef"),
        ("Linda Evangelista", 1, "Sous Chef"),
@@ -37,5 +37,5 @@ VALUES ("Bob Ross", 1, "Head Chef"),
        ("Elon Musk", 2, "Busser"),
        ("Kanye West", 2, "Busser"),
        ("Florence Pugh", 3, "Manager"),
-       ("Fyodor Dosotoevsky", 3, "Assistant Manager");
+       ("Fyodor Dosotoevsky", 3, "Assistant Manager"); */
 
