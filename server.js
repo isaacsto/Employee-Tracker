@@ -34,19 +34,17 @@ async function main() {
 
     case 'View all departments':
       const departments = await db.promise().query('SELECT * FROM departments')
-      console.table(departments);
+      console.table(departments[0]);
       break;
 
  case 'View all roles':
-      const employee_roles = await db.promise().query('SELECT * FROM employee_roles')
-      console.log(employee_roles[0])
-      console.table(employee_roles)
+      const employee_roles = await db.promise().query('SELECT * FROM employee_roles')   
+      console.table(employee_roles[0]);
       break;
 
     case 'View all employees':
       const employees = await db.promise().query('SELECT * FROM employees')
-      console.log(employees[0])
-      console.table(employees);
+      console.table(employees[0]);
       break;
 
     case 'Add a department':
