@@ -23,7 +23,8 @@ CREATE TABLE employees (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   employee_name VARCHAR(60) NOT NULL,
   department_id INT, 
-  title VARCHAR(30) NOT NULL   
+  title VARCHAR(30) NOT NULL,
+  manager VARCHAR(30)
 );
 
 

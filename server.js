@@ -98,6 +98,47 @@ async function main() {
       })
       break;  
     case 'Update an employee role':
+      inquirer.prompt(
+        {
+          type: 'list',
+          name: 'name',
+          message: 'Please select and employee to update:',
+          choices: [
+            'Bob Ross',
+            'Linda Evangelista',
+            'Ralph Fienz',
+            'Karen Pence',
+            'Anthony Bourdain',
+            'Samuel L. Jackson',
+            "Ted Bundy",
+            "John F Kennedy Jr.",
+            "Natalie Wynn",
+            "Tasya Van Ree",
+            "Millie Bobby Brown",
+            "Peter Kropotkin",
+            "Rupaul",
+            "Bindi Irwin",
+            "Jack Skellington",
+            "Elon Musk",
+            "Kanye West",
+            "Florence Pugh",
+            "Fyodor Dosotoevsky"
+          ]
+        },
+        {
+          type: 'input',
+          name: 'newRole',
+          message: "Please enter a new role for this employee:"
+        }
+      )
+      .then(function(answer){
+        console.log(answer);
+        const sql = `UPDATE employees SET role = ${answer.newRole} WHERE name = ${answer.name}`;
+        db.query(sql, function(err, result) {
+          if (err) throw err;
+          console.log(`Updated ${answer.name}'s role to to ${answer.newRole}`)
+        });
+      })
       break;
   }
 }
