@@ -50,17 +50,52 @@ async function main() {
       inquirer.prompt(
         {
           type: 'input',
-          name: 'question',
+          name: 'departmentName',
           message: 'New department name:',
         }
       )
       .then(function(answer){
         console.log(answer);
+        const sql = 'INSERT INTO departments (department_name) VALUES (?)';
+        db.query(sql, answer.departmentName, function(err, result) {
+          if (err) throw err;
+          console.log(`Added ${answer.departmentName} to departments table`)
+        });
       })
       break;
     case 'Add a role':
+      inquirer.prompt(
+        {
+          type: 'input',
+          name: 'roleName',
+          message: 'Please enter a new role name, a role id, a salary, and the department id:',
+        }
+      )
+      .then(function(answer){
+        console.log(answer);
+        const sql = 'INSERT INTO employee_roles (title) VALUES (?)';
+        db.query(sql, answer.roleName, function(err, result) {
+          if (err) throw err;
+          console.log(`Added ${answer.roleName} to employee_roles table`)
+        });
+      })
       break;
     case 'Add an employee':
+      inquirer.prompt(
+        {
+          type: 'input',
+          name: 'employeeName',
+          message: 'Please enter new employee name, department id, and job title:',
+        }
+      )
+      .then(function(answer){
+        console.log(answer);
+        const sql = 'INSERT INTO employees(employee_name) VALUES (?)';
+        db.query(sql, answer.roleName, function(err, result) {
+          if (err) throw err;
+          console.log(`Added ${answer.employeeName} to employees table`)
+        });
+      })
       break;  
     case 'Update an employee role':
       break;
