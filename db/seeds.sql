@@ -4,18 +4,18 @@ VALUES ("Back of House"),
        ("Front of House"),
        ("Management"); 
       
-INSERT INTO employee_roles (title, salary, department_id)
-VALUES ("Head Chef", 100000.00, 1),
-       ("Sous chef", 70000.00, 1),
-       ("Linecook", 40000.00, 1),
-       ("Dishwasher", 25000.00, 1),
-       ("Maitre d", 45000.00, 2),
-       ("Host", 35000.00, 2),
-       ("Bartender", 90000.00, 2),
-       ("Waiter", 40000.00, 2),
-       ("Busser", 25000.00, 2),
-       ("Manager", 70000.00, 3),
-       ("Assistant Manager", 60000.00, 3);
+INSERT INTO employee_roles (title, role_id, salary, department_id)
+VALUES ("Head Chef", 3, 100000.00, 1),
+       ("Sous chef", 4, 70000.00, 1),
+       ("Linecook", 9, 40000.00, 1),
+       ("Dishwasher", 11, 25000.00, 1),
+       ("Maitre d", 5, 45000.00, 2),
+       ("Host", 8, 35000.00, 2),
+       ("Bartender", 6, 90000.00, 2),
+       ("Waiter", 7, 40000.00, 2),
+       ("Busser", 10, 25000.00, 2),
+       ("Manager", 1 70000.00, 3),
+       ("Assistant Manager", 2, 60000.00, 3);
        
 
 INSERT INTO employees (employee_name, department_id, title)
