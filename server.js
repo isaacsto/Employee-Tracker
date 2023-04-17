@@ -29,8 +29,8 @@ async function main() {
       ]
     },
   ]);
+  console.log(answers) 
   switch (answers.action) {
-
     case 'View all departments':
       const departments = await db.promise().query('SELECT * FROM departments')
       console.table(departments[0]);
@@ -63,6 +63,7 @@ async function main() {
         });
       })
       break;
+
     case 'Add a role':
       inquirer.prompt(
         {
@@ -80,23 +81,25 @@ async function main() {
         });
       })
       break;
+
     case 'Add an employee':
       inquirer.prompt(
         {
           type: 'input',
           name: 'employeeName',
-          message: 'Please enter new employee name, department id, and job title:',
+          message: 'Please enter new employee name, department id, job title, and manager:',
         }
       )
       .then(function(answer){
         console.log(answer);
-        const sql = 'INSERT INTO employees(employee_name) VALUES (?)';
-        db.query(sql, answer.roleName, function(err, result) {
+        const sql = 'INSERT INTO employees (employee_name) VALUES (?)';
+        db.query(sql, answer.employeeName, function(err, result) {
           if (err) throw err;
           console.log(`Added ${answer.employeeName} to employees table`)
         });
       })
       break;  
+
     case 'Update an employee role':
       inquirer.prompt(
         {
@@ -133,10 +136,10 @@ async function main() {
       )
       .then(function(answer){
         console.log(answer);
-        const sql = `UPDATE employees SET role = ${answer.newRole} WHERE name = ${answer.name}`;
+        const sql = `UPDATE employees SET title = '${answer.newRole}' WHERE employee_name = '${answer.name}'`;
         db.query(sql, function(err, result) {
           if (err) throw err;
-          console.log(`Updated ${answer.name}'s role to to ${answer.newRole}`)
+          console.log(`Updated ${answer.name}'s role to ${answer.newRole}`)
         });
       })
       break;
