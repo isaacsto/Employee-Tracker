@@ -29,7 +29,6 @@ async function main() {
       ]
     },
   ]);
-
   switch (answers.action) {
 
     case 'View all departments':
