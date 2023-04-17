@@ -47,6 +47,16 @@ async function main() {
       break;
 
     case 'Add a department':
+      inquirer.prompt(
+        {
+          type: 'input',
+          name: 'question',
+          message: 'New department name:',
+        }
+      )
+      .then(function(answer){
+        console.log(answer);
+      })
       break;
     case 'Add a role':
       break;
