@@ -42,7 +42,7 @@ async function main() {
       break;
 
     case 'View all employees':
-      const employees = await db.promise().query('SELECT * FROM employees')
+      const employees = await db.promise().query('SELECT employees.id, employees.employee_name, employee_roles.title, employee_roles.salary FROM employees INNER JOIN employee_roles ON employees.title = employee_roles.title')
       console.table(employees[0]);
       break;
 
