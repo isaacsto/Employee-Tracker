@@ -14,7 +14,7 @@ VALUES ("Head Chef", 3, 100000.00, 1),
        ("Bartender", 6, 90000.00, 2),
        ("Waiter", 7, 40000.00, 2),
        ("Busser", 10, 25000.00, 2),
-       ("Manager", 1 70000.00, 3),
+       ("Manager", 1, 70000.00, 3),
        ("Assistant Manager", 2, 60000.00, 3);
        
 
