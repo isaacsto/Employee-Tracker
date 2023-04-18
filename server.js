@@ -93,7 +93,7 @@ async function main() {
       )
       .then(function(answer){
         console.log(answer);
-        const [employeName, departmentId, jobTitle, manager] = answer.employeeInfo.split(',');
+        const [employeeName, departmentId, jobTitle, manager] = answer.employeeInfo.split(',');
         const sql = 'INSERT INTO employees (employee_name, department_id, title, manager) VALUES (?, ?, ?, ?)';
         db.query(sql, [employeeName, departmentId, jobTitle, manager], function(err, result) {
           if (err) throw err;
