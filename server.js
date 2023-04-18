@@ -24,7 +24,7 @@ async function main() {
         'View all employees',
         'Add a department',
         'Add a role',
-        'Add employee',
+        'Add an employee',
         'Update an employee role'
       ]
     },
@@ -134,6 +134,7 @@ async function main() {
           message: "Please enter a new role for this employee:"
         }
       )
+      
       .then(function(answer){
         console.log(answer);
         const sql = `UPDATE employees SET title = '${answer.newRole}' WHERE employee_name = '${answer.name}'`;
@@ -142,6 +143,7 @@ async function main() {
           console.log(`Updated ${answer.name}'s role to ${answer.newRole}`)
         });
       })
+      
       break;
   }
 }
