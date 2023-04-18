@@ -68,14 +68,15 @@ async function main() {
       inquirer.prompt(
         {
           type: 'input',
-          name: 'roleName',
+          name: 'roleInfo',
           message: 'Please enter a new role name, a role id, a salary, and the department id:',
         }
       )
       .then(function(answer){
         console.log(answer);
-        const sql = 'INSERT INTO employee_roles (title) VALUES (?)';
-        db.query(sql, answer.roleName, function(err, result) {
+        const [roleName, roleId, salary, deptId] = answer.roleInfo.split(',');
+        const sql = 'INSERT INTO employee_roles (title, role_id, salary, department_id) VALUES (?, ?, ?, ?)';
+        db.query(sql, [roleName, roleId, salary, deptId], function(err, result) {
           if (err) throw err;
           console.log(`Added ${answer.roleName} to employee_roles table`)
         });
@@ -86,13 +87,14 @@ async function main() {
       inquirer.prompt(
         {
           type: 'input',
-          name: 'employeeName',
+          name: 'employeeInfo',
           message: 'Please enter new employee name, department id, job title, and manager:',
         }
       )
       .then(function(answer){
         console.log(answer);
-        const sql = 'INSERT INTO employees (employee_name) VALUES (?)';
+        const [employeName, departmentId, jobTitle, manager] = answer.employeeInfo.split(',');
+        const sql = 'INSERT INTO employees (employee_name, department_id, title, manager) VALUES (?, ?, ?, ?)';
         db.query(sql, answer.employeeName, function(err, result) {
           if (err) throw err;
           console.log(`Added ${answer.employeeName} to employees table`)
@@ -101,7 +103,7 @@ async function main() {
       break;  
 
     case 'Update an employee role':
-      inquirer.prompt(
+      inquirer.prompt([
         {
           type: 'list',
           name: 'name',
@@ -132,7 +134,7 @@ async function main() {
           type: 'input',
           name: 'newRole',
           message: "Please enter a new role for this employee:"
-        }
+      }]
       )
       
       .then(function(answer){
