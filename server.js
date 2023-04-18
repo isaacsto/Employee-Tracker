@@ -78,7 +78,7 @@ async function main() {
         const sql = 'INSERT INTO employee_roles (title, role_id, salary, department_id) VALUES (?, ?, ?, ?)';
         db.query(sql, [roleName, roleId, salary, deptId], function(err, result) {
           if (err) throw err;
-          console.log(`Added ${answer.roleName} to employee_roles table`)
+          console.log(`Added ${roleName} to employee_roles table`)
         });
       })
       break;
@@ -95,9 +95,9 @@ async function main() {
         console.log(answer);
         const [employeName, departmentId, jobTitle, manager] = answer.employeeInfo.split(',');
         const sql = 'INSERT INTO employees (employee_name, department_id, title, manager) VALUES (?, ?, ?, ?)';
-        db.query(sql, answer.employeeName, function(err, result) {
+        db.query(sql, [employeeName, departmentId, jobTitle, manager], function(err, result) {
           if (err) throw err;
-          console.log(`Added ${answer.employeeName} to employees table`)
+          console.log(`Added ${employeeName} to employees table`)
         });
       })
       break;  
