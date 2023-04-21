@@ -34,16 +34,19 @@ async function main() {
     case 'View all departments':
       const departments = await db.promise().query('SELECT * FROM departments')
       console.table(departments[0]);
+      main();
       break;
 
  case 'View all roles':
       const employee_roles = await db.promise().query('SELECT employee_roles.id, employee_roles.title, departments.department_name AS department, employee_roles.salary FROM employee_roles LEFT JOIN departments on employee_roles.department_id = departments.id')   
       console.table(employee_roles[0]);
+      main();
       break;
 
     case 'View all employees':
       const employees = await db.promise().query('SELECT employees.id, employees.employee_name, employee_roles.title, employee_roles.salary FROM employees INNER JOIN employee_roles ON employees.title = employee_roles.title')
       console.table(employees[0]);
+      main();
       break;
 
     case 'Add a department':
@@ -61,6 +64,7 @@ async function main() {
           if (err) throw err;
           console.log(`Added ${answer.departmentName} to departments table`)
         });
+        main();
       })
       break;
 
@@ -80,6 +84,7 @@ async function main() {
           if (err) throw err;
           console.log(`Added ${roleName} to employee_roles table`)
         });
+        main();
       })
       break;
 
@@ -99,7 +104,8 @@ async function main() {
           if (err) throw err;
           console.log(`Added ${employeeName} to employees table`)
         });
-      })
+        main();
+      }) 
       break;  
 
     case 'Update an employee role':
@@ -144,6 +150,7 @@ async function main() {
           if (err) throw err;
           console.log(`Updated ${answer.name}'s role to ${answer.newRole}`)
         });
+        main();
       })
       
       break;
