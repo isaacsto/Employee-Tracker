@@ -3,3 +3,5 @@
 The purpose of this application is to create a command line interface that allows a user to view employee information as well as update that information
 
 <img src="assets/Screenshot%202023-04-18%20at%206.13.10%20PM.png">
+
+https://drive.google.com/file/d/1Ami9SkKyz5eF2QPzKyI5RwU-SLCAKvaI/view
